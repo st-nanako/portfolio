@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- リセットcss -->
+    <link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+    <title>プロフィール</title>
+</head>
+<body id="profile">
+    <header>
+        <div class="menu-bar">
+            <div class="logo">
+                <a href="index.html"><img src="" alt="logo"></a>
+            </div>
+            <nav>
+                <ul class="global-nav">
+                    <li><a href="#" class="color_inversion_btn">PROFILE</a></li>
+                    <li><a href="skill.html" class="color_inversion_btn">SKILL</a></li>
+                    <li><a href="work.html" class="color_inversion_btn">WORKS</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <h1>PROFILE</h1>
+        <div class="profile_content">
+            <div class="introduction">
+                <div class="self">
+                    <h2>自己紹介</h2>
+                    <table>
+                        <tr>
+                            <th>名前</th>
+                            <td>佐藤奈々子</td>
+                        </tr>
+                        <tr>
+                            <th>生年月日</th>
+                            <td>2005年12月23日</td>
+                        </tr>
+                    </table>
+                    <p class="indent">
+                        最近はじめた趣味は風景を撮ることです。桜の写真や川の写真を撮ることが多いです。
+                    </p>
+                    <p class="indent">
+                        絵を描くことが好きで、主に漫画キャラクターやオリジナルのキャラクターを描くことが多いです。特に翼を描くことが好きで天使のキャラクターをよく描いています。
+                    </p>
+                    <p class="indent">
+                        プログラミングではよくpythonを使っていて授業でtkinterを使ったゲーム作りではPOKER GAMEを作りました。役の判定や画面のデザインの他にコンピュータとの対戦をこだわりました。コンピュータがカードを引いたときに役なしだった場合、役ができるまでプレイヤーと同じ回数引き直すようにしてなるべく役ができるようにしました。
+                    </p>
+                </div>
+                <div class="comics">
+                    <h2>好きな漫画</h2>
+                </div>
+            </div>
+            <div class="hobby">
+                <h2>イラスト</h2>
+                <div class="illustration">
+                    <div class="float-left img zoom"><img src="./img/illustration/tanzanite.jpg" alt=""></div><!--zoom-->
+                    <h3>タンザナイト</h3>
+                    <p class="indent">
+                        漫画「宝石の国」を元にオリジナルキャラクターを描きました。
+                        タンザナイトという宝石を参考に髪などを描きました。
+                    </p>
+                    <p class="indent">
+                        タンザナイトは自然光では青。白熱電灯では紫を帯びた色になります。
+                        その特徴をもとに左から光が当たっている場所は青を使い、右に行くにつれて紫になるようにグラデーションをこだわりました。
+                    </p>
+                </div>
+                <div class="illustration">
+                    <div class="float-right img_min zoom"><img src="./img/illustration/wings_1.jpg" alt=""></div><!--zoom-->
+                    <div class="float-right img_min zoom"><img src="./img/illustration/wings_2.jpg" alt=""></div><!--zoom-->
+                    <h3 class="text_right">翼</h3>
+                    <p class="indent">
+                        リアルな翼を描きたくて資料を見ながら描きました。
+                        片方はデジタルで片方はアナログで水彩を使って描きました。
+                    </p>
+                </div>
+                <div class="illustration side">
+                    <div class=" img_min zoom"><img src="img/illustration/minchara_1.jpg" alt=""></div>
+                    <div class=" img_min zoom"><img src="img/illustration/minchara_2.jpg" alt=""></div>
+                    <div class=" img_min zoom"><img src="img/illustration/minchara_3.jpg" alt=""></div>
+                    <div class=" img_min zoom"><img src="img/illustration/minchara_4.jpg" alt=""></div>
+                </div>
+                <h3>ミニキャラ</h3>
+                <p class="indent">ミニキャラを描くのにはまり今まで描いたオリジナルキャラクターをミニキャラ化しました。基本的にアナログで主にペンだけを使って描きました。</p>
+            </div>
+        </div>
+    </div>
+    <!-- 画像拡大後の要素 -->
+    <div id = "zoomback">
+        <img id = "zoomimg" src = "../img/illustration/minchara_4.jpg">
+    </div>
+    <!-- js -->
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

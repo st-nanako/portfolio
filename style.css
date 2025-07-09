@@ -1,0 +1,423 @@
+@charset "utf-8";
+
+/* 全体 */
+
+/* メニューバー */
+/* メニューバーとコンテンツが重ならない設定 */
+html {
+    scroll-padding-top: 50px;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: block;
+    position: sticky;
+    /*ポジションを固定する*/
+    top: 0px;
+    /*一番上に設置*/
+    left: 0px;
+    z-index: 999;
+    
+    width: 100%;
+    padding: 0 0;
+}
+
+header:hover{
+    background-color: rgba(217, 217, 217, 0.5);
+}
+
+.global-nav {
+    display: flex;
+    list-style: none;
+    margin-top: 20px;
+}
+
+.global-nav li {
+    margin: 0 2px;
+}
+.global-nav li a{
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.menu-bar {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* メニューバー　ボタンアニメーション */
+.color_inversion_btn {
+    border-radius: 20px;
+    display: inline-block;
+    width: 140px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 35px;
+    outline: none;
+    color: #fff;
+    border:2px solid #000000;
+    background-color: #000000;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+.color_inversion_btn:hover {
+    color: #000000;
+    border:2px solid #000000;
+    background-color: #fff;
+}
+
+/* メニューバー　下線 */
+/* .global-nav a {
+    position: relative;
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.global-nav a::before {
+    border-radius: 10px;
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 0;
+    height: 4px;
+    background: white;
+    transition: 0.3s;
+}
+
+.global-nav a:hover::before {
+    left: 0;
+    width: 100%;
+} */
+
+/* 背景画像 */
+.background {
+    background-repeat: no-repeat;
+    background-position: 20% 25%;
+    /* background-attachment: fixed; */
+    background-size: cover;
+}
+
+
+/* トップ画面以外の画面の共通部分 */
+.content{
+    margin-top: 29%;
+    background-color: rgba(217, 217, 217, 0.5);
+}
+
+.content h1{
+    font-size: 64px;
+    margin-left: 40px;
+    color: white;
+    font-weight: normal;
+}
+/* 画像に対しての文字の回り込み */
+.float-left{
+    width: 100%;
+    height: 100%;
+    margin-right: 1em;
+    float: left;
+}
+.float-right{
+    width: 100%;
+    height: 100%;
+    margin-left: 1em;
+    float: right;
+}
+
+.indent{
+    text-indent: 1em;
+}
+
+.text_left{
+    text-align: left;
+}
+.text_right{
+    text-align: right;
+}
+/* 背景画像 */
+
+/* index */
+#index{
+    background-image: url(./img/sakura_top.jpg);
+    background-position: center;
+}
+/* profile */
+#profile{
+    background-image: url(./img/sakura_profile.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+/* skill */
+
+#skill{
+    background-image: url(./img/skills.jpg);
+    background-size: 1280px;
+    background-position: center;
+}
+
+/* アイコンを丸くする処理 */
+#index .circle{
+    width: 246px;
+    height: 246px;
+    border-radius: 100%;
+    background-image: url(./img/桜.jpg);
+    background-color: #fff;
+    background-position: center;
+    
+}
+/* 別ページへの遷移アイテムの調整 */
+#index .item_transition{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    font-size: 20px;
+}
+
+#index .content{
+    display: flex;
+    margin-top: 20%;
+}
+#index .middle{
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 別ページへの遷移ボタン */
+#index .transition_item{
+    width: 267px;
+    height: 210px;
+    background-color: #fff;
+    border-radius: 5%;
+    padding: 1em;
+}
+
+#index .profile_content{
+    margin: 0 auto;
+    background-color: rgba(217, 217, 217, 0.8);
+    padding: 15px;
+    width: 100%;
+    font-size: 20px;
+    display: flex;
+}
+
+#index .text_center{
+    display: flex;
+    align-items: center;
+    height: 270px;
+    width: 337px;
+}
+/* 画像とテキストの間をあける */
+#index section{
+    margin-left: 50px;
+}
+/* 文字の間をあける */
+#index section p,h3{
+    margin-bottom: 0.2em;
+}
+/* 右揃え */
+#index section .right{
+    margin-left: 80%;
+}
+#index section a{
+    margin-left: 95%;
+    margin-top: 0.5em;
+}
+/* pタグを横並び */
+#index .side{
+    display: flex;
+}
+/* メールのpタグ同士の間をあける */
+#index .space{
+    margin-right: 1em;
+}
+/* タイトルのスタイル調整 */
+#index h1{
+    color: #fff;
+    margin-top: 10%;
+    margin-left: 10%;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+#index .background_img{
+    width: 100%;
+    height: 100vh;
+    background-image: url(img/profile_back.jpg);
+    background-size: cover;
+}
+
+/* profile */
+/* profileのコンテンツを横並びにする */
+#profile .profile_content{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* profileのコンテンツごとの大きさと位置 */
+#profile .profile_content .introduction{
+    /* 下揃え(親要素) */
+    position: relative;
+}
+/* 自己紹介box */
+#profile .profile_content .introduction .self{
+    width: 512px;
+    padding: 20px;
+    background-color:white;
+    border-radius: 5px;
+}
+/* 自己紹介のテーブルのthとtdの間をあける */
+#profile .profile_content .introduction .self td{
+    padding-left: 1em;
+}
+/* #profile .profile_content .introduction .self p{
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5em;
+} */
+
+
+/* 好きな漫画紹介box */
+#profile .profile_content .introduction .comics{
+    width: 512px;
+    height: 309px;
+    padding: 20px;
+    background-color:white;
+    border-radius: 5px;
+    /* 下揃え(子要素) */
+    position: absolute;
+    bottom: 0px;
+}
+/* イラストbox */
+#profile .profile_content .hobby{
+    width: 564px;
+    padding: 20px;
+    background-color:white;
+    border-radius: 5px;
+}
+
+/* profileのコンテンツが端っこにつかないように余白 */
+#profile .profile_content{
+    padding: 60px;
+}
+
+/* profileコンテンツ内の文字の間隔 */
+
+#profile .profile_content h2,.space{
+    margin-bottom: 0.5em;
+}
+
+/* profileのイラストboxの画像の大きさ調整枠 */
+#profile .img {
+    width: auto;
+    height: 224px;
+}
+
+#profile .img_min {
+    width: 100px;
+    height: 100px;
+}
+
+#profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 画像拡大処理 */
+#profile .img:hover img{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+#profile .img_min:hover img{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* 画像クリック時画面に大きく表示 */
+#profile{
+  position: relative;
+}
+
+#profile #zoomback{
+  position: fixed;
+  top: 0;
+  /* 画面いっぱいに */
+  width:100vw;
+  height:100vh;
+
+  /* 背景を少し透過 */
+  background-color:rgba(0,0,0,0.8); 
+
+  /* 中のimgを中央揃え */
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  display:none;
+}
+
+
+/* 拡大画像のサイズを調整 */
+#zoomimg{
+    width: 50%;
+}
+
+#profile #zoomback img{
+  width:50%;
+  border:solid 5px #fff;
+}
+
+#profile .deka {
+
+animation:deka 0.3s ease-out;
+}
+
+@keyframes deka {
+
+from {
+
+transform:scale(0);
+}
+
+}
+
+/* 画像横並び */
+#profile .side{
+    display: flex;
+}
+
+/* 画像同士の間をあける */
+#profile .illustration{
+    margin-bottom: 10%;
+}
+
+/* skill */
+
+#skill .block{
+    width: 356px;
+    height: 239px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#skill .rectangle_block{
+    width: 736px;
+    height: 237px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#skill .top,.bottom{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+#skill .skill_content{
+    padding: 60px;
+}
