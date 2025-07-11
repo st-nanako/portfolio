@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+.star-rating {
+  display: flex;
+  position: relative;
+  height: 24px;
+  line-height: 1;
+}
+
+.star-rating span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+}
+
+.star-rating span:not(:first-child) {
+  margin-left: 2px
+}
+
+.star-rating > span {
+  background: url(../img/icon/星枠.png) no-repeat 0 0;
+  background-size: 24px 24px
+}
+
+.star-rating-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  overflow: hidden;
+  white-space: nowrap
+}
+
+.star-rating-front > span {
+    background: url(../img/icon/星.png) no-repeat 0 0;
+    background-size: 24px 24px
+}
+
+/*評価1の時*/
+.star-rating-1 .star-rating-front {
+    width: 24px;
+}
+/*評価1.5の時*/
+.star-rating-15 .star-rating-front {
+    width: 38px;
+}
+/*評価2の時*/
+.star-rating-2 .star-rating-front {
+    width: 50px;
+}
+/*評価4.5の時*/
+.star-rating-45 .star-rating-front {
+    width: 116px;
+}

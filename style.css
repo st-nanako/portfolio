@@ -45,6 +45,16 @@ header:hover{
     justify-content: space-between;
 }
 
+/* ロゴ調整 */
+.logo img{
+    width: 100%;
+    height: auto;
+}
+.logo{
+    width: 15%;
+    height: 5%;
+}
+
 /* メニューバー　ボタンアニメーション */
 .color_inversion_btn {
     border-radius: 20px;
@@ -454,25 +464,51 @@ transform:scale(0);
     margin-left: 10%;
 }
 
+/* 保有資格の要素の重ねた要素の大きさ調整 */
+#skill .qualification .overlap{
+    width: 736px;
+}
+
 /* それぞれのコンテンツの背景画像 */
 #skill .front{
     background-image: url(./img/icon/front.png);
     background-repeat: no-repeat;
-    background-position: 20% 25%;
-    background-size: cover;
-
+    background-position: 180% 20%;
+    background-size: 75%;
 }
-#skill .back{
 
+#skill .back{
+    background-image: url(./img/icon/back.png);
+    background-repeat: no-repeat;
+    background-position: 180% 20%;
+    background-size: 75%;
+    
 }
 #skill .db{
-
+    background-image: url(./img/icon/db.png);
+    background-repeat: no-repeat;
+    background-position: 180% 20%;
+    background-size: 75%;
+    
 }
 #skill .others{
-
+    background-image: url(./img/icon/others.png);
+    background-repeat: no-repeat;
+    background-position: 180% 20%;
+    background-size: 75%;
+    
 }
 #skill .qualification{
+    background-image: url(./img/icon/qualification.png);
+    background-repeat: no-repeat;
+    background-position: 120% 50%;
+    background-size: 60%;
 
+}
+/* それぞれのコンテンツに重ねる */
+#skill .overlap{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 
