@@ -300,10 +300,10 @@ header:hover{
 }
 /* profile */
 /* profileのコンテンツを横並びにする */
-#profile .profile_content{
+/* #profile .profile_content{
     display: flex;
     justify-content: space-between;
-}
+} */
 
 /* profileのコンテンツごとの大きさと位置 */
 #profile .profile_content .introduction{
@@ -312,10 +312,11 @@ header:hover{
 }
 /* 自己紹介box */
 #profile .profile_content .introduction .self{
-    width: 512px;
+    width: 90%;
     padding: 20px;
     background-color:white;
     border-radius: 5px;
+    margin: 0 auto;
 }
 /* 自己紹介のテーブルのthとtdの間をあける */
 #profile .profile_content .introduction .self td{
@@ -340,10 +341,12 @@ header:hover{
 }
 /* イラストbox */
 #profile .profile_content .hobby{
-    width: 564px;
+    width: 90%;
     padding: 20px;
     background-color:white;
     border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 5%;
 }
 
 /* profileのコンテンツが端っこにつかないように余白 */
@@ -359,7 +362,7 @@ header:hover{
 
 /* profileのイラストboxの画像の大きさ調整枠 */
 #profile .img {
-    width: auto;
+    width: 224px;
     height: 224px;
 }
 
@@ -438,10 +441,13 @@ transform:scale(0);
 }
 
 /* 画像同士の間をあける */
-#profile .illustration{
-    margin-bottom: 10%;
+#profile .illustration_1{
+    margin-bottom: 15%;
 }
 
+#profile .illustration{
+    margin-bottom: 5%;
+}
 /* 文字装飾 */
 #profile .profile_content h3::before{
     content: "";
