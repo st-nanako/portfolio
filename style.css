@@ -1,7 +1,12 @@
 @charset "utf-8";
 
 /* 全体 */
-
+/* ロゴ画像マウスホバー時の変化 */
+/* 画像拡大処理 */
+.logo img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
 /* メニューバー */
 /* メニューバーとコンテンツが重ならない設定 */
 html {
@@ -652,4 +657,10 @@ transform:scale(0);
 #work .text{
     width: 70%;
     margin-left: 2%;
+}
+/* 文字装飾 */
+#work h3::before{
+    content: "";
+    padding-right: 10px;
+    border-left: 7px solid black;
 }
