@@ -1,6 +1,89 @@
 @charset "utf-8";
 
 /* 全体 */
+/* フッター */
+footer{
+    padding: 1em;
+    background-color: rgba(217, 217, 217, 0.5);
+}
+footer .page_link{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+footer h3::before{
+    content: "";
+    padding-right: 10px;
+    border-left: 7px solid black;
+}
+/* フッター文字調整 */
+footer p,
+footer h3{
+    margin: 0px;
+}
+/* フッターdiv */
+/* footer div{
+    margin-right: 5%;
+} */
+/* フッターのaタグの設定 */
+footer a{
+    text-decoration: none;
+    color: black;
+}
+
+footer a:hover{
+    color: white;
+}
+/* フッターのトップに戻るaタグ */
+footer .rigth{
+    display: block;
+    margin-top: auto;
+}
+/* それぞれのページのリンクグループ化 */
+.works{
+    display: flex;
+    flex-flow: column;
+}
+.profile{
+    display: flex;
+    flex-flow: column;
+}
+/* フッターの調整 */
+.footer_logo{
+    width: 300px;
+}
+.footer_logo img{
+    width: 100%;
+    height: auto;
+}
+.footer_logo img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+/* フッター疑似要素 */
+.arrow,.top_arrow{
+    position: relative;
+    padding: 0 0 0 16px;
+}
+.arrow::before{
+    content: "";
+    position: absolute;
+    top: 50%;   /* 縦軸をセンタリングする */ 
+    left: 0;
+    transform: translateY(-50%);   /* 縦軸をセンタリングする */  
+    border: 5px solid transparent;
+    border-left: 8px solid black;   /* 好みで色を変えてください */  
+}
+.top_arrow::before{
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    border: 6px solid transparent;
+    border-bottom: 7px solid black;   /* 好みで色を変えてください */  
+}
 /* ロゴ画像マウスホバー時の変化 */
 /* 画像拡大処理 */
 .logo img:hover{
@@ -56,8 +139,8 @@ header:hover{
     height: auto;
 }
 .logo{
-    width: 15%;
-    height: 5%;
+    width: 200px;
+    height: 80px;
 }
 
 /* メニューバー　ボタンアニメーション */
@@ -80,31 +163,6 @@ header:hover{
     border:2px solid #000000;
     background-color: #fff;
 }
-
-/* メニューバー　下線 */
-/* .global-nav a {
-    position: relative;
-    text-decoration: none;
-    color: white;
-    transition: 0.3s;
-}
-
-.global-nav a::before {
-    border-radius: 10px;
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    width: 0;
-    height: 4px;
-    background: white;
-    transition: 0.3s;
-}
-
-.global-nav a:hover::before {
-    left: 0;
-    width: 100%;
-} */
 
 /* 背景画像 */
 .background {
@@ -206,8 +264,8 @@ header:hover{
 }
 
 #index .content{
-    display: flex;
-    margin-top: 20%;
+    /* display: flex; */
+    margin-top: 50vh;
 }
 #index .middle{
     height: 50vh;
@@ -217,8 +275,7 @@ header:hover{
 }
 /* 別ページへの遷移ボタン */
 #index .transition_item{
-    width: 267px;
-    height: 210px;
+    width: 28%;
     background-color: #fff;
     border-radius: 5%;
     padding: 1em;
@@ -291,10 +348,6 @@ header:hover{
 }
 
 #index .img:hover img{
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-}
-#index .img_min:hover img{
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
@@ -498,11 +551,15 @@ transform:scale(0);
     text-align: center;
 }
 
-#skill .top h2,h3,p{
+#skill .top h2,
+#skill .top h3, 
+#skill .top p{
     margin: 0.5em;
 }
 
-#skill .bottom h2,h3,p{
+#skill .bottom h2,
+#skill .bottom h3,
+#skill .bottom p{
     margin: 0.5em;
 }
 
@@ -680,4 +737,54 @@ transform:scale(0);
     content: "";
     padding-right: 10px;
     border-left: 7px solid black;
+}
+
+/* パソコン以外の画面 */
+@media screen and (max-width: 1154px) {
+	/* 1154px以下に適用されるCSS*/
+    /* 自己紹介文とアイコン横並び */
+    #index .profile_content{
+        flex-flow: column;
+    }
+}
+@media screen and (max-width: 959px) {
+	/* 959px以下に適用されるCSS（タブレット用） */
+    /* 要素の大きさ変更 */
+    #index .transition_item{
+        height: auto;
+        width: auto;
+    }
+    /* メニューバーの要素縦並び */
+    .menu-bar{
+        flex-direction: column;
+    }
+    .menu-bar ul{
+        padding-left: 0px;
+    }
+}
+@media screen and (max-width: 640px) {
+	/* 640px以下に適用されるCSS */
+    /* imgの大きさ調整 */
+    #index .img{
+        width: 100px;
+        height: 100px;
+    }
+    #index .background_img{
+        /* 子要素がはみ出さないようにする */
+        overflow: hidden;
+    }
+}
+@media screen and (max-width: 480px) {
+	/* 480px以下に適用されるCSS（スマホ用） */
+    #index .item_transition{
+        flex-direction: column;
+    }
+    #index .transition_item{
+        width: 40%;
+    }
+    #index .circle{
+    width: 100px;
+    height: 100px;
+    
+    }
 }
