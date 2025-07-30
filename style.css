@@ -739,6 +739,11 @@ transform:scale(0);
     border-left: 7px solid black;
 }
 
+/* 文字間隔 */
+#work .works_content h3{
+    margin-top: 20px;
+}
+
 /* パソコン以外の画面 */
 @media screen and (max-width: 1154px) {
 	/* 1154px以下に適用されるCSS*/
@@ -786,5 +791,8 @@ transform:scale(0);
     width: 100px;
     height: 100px;
     
+    }
+    .color_inversion_btn{
+        width: 100px;
     }
 }
