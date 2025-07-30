@@ -12,6 +12,11 @@ footer .page_link{
     justify-content: space-between;
     width: 100%;
 }
+.footer_item{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
 footer h3::before{
     content: "";
     padding-right: 10px;
@@ -383,10 +388,6 @@ header:hover{
 #profile .profile_content .introduction .self td{
     padding-left: 1em;
 }
-/* #profile .profile_content .introduction .self p{
-    letter-spacing: 0.05em;
-    margin-bottom: 0.5em;
-} */
 
 
 /* 好きな漫画紹介box */
@@ -781,12 +782,32 @@ transform:scale(0);
 }
 @media screen and (max-width: 480px) {
 	/* 480px以下に適用されるCSS（スマホ用） */
-    #index .item_transition{
+    /* 縦並び変更 */
+    footer .page_link{
         flex-direction: column;
     }
+    /* フッター調整 */
+    #index .item_transition{
+        margin: 0px;
+    }
+    footer .footer_item{
+        width: 100%;
+        justify-content: space-between;
+    }
+    /* フッターボタン調整 */
+    footer .top_btn{
+        margin-top: 2em;
+    }
+    /* ページ遷移ボタン調整 */
     #index .transition_item{
         width: 40%;
     }
+    /* ページ遷移ボタン画像大きさ調整 */
+    #index .img{
+        width: 80px;
+        height: 80px;
+    }
+    /* アイコン大きさ調整 */
     #index .circle{
     width: 100px;
     height: 100px;
@@ -794,5 +815,17 @@ transform:scale(0);
     }
     .color_inversion_btn{
         width: 100px;
+    }
+
+    #index .content{
+    margin-top: 80vh;
+    }
+    .content{
+    margin-top: 75vh;
+    }
+    /* profile */
+    #profile .profile_content{
+        padding: 0px;
+        padding-top: 20px;
     }
 }
